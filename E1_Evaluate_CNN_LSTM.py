@@ -128,6 +128,8 @@ def run_experiment(repeats=1):
     # define model
     # reshape data into time steps of sub-sequences
     n_steps, n_length = 3, 50  # best so far is 5 30
+    for i in range(len(testX)):
+        print(testX[i].shape, testy[i])
     testX = testX.reshape((testX.shape[0], n_steps, n_length, n_features))
     loss, acc = model.evaluate(testX, testy, verbose=2)
     print("Restored model, accuracy: {:5.2f}%".format(100 * acc))

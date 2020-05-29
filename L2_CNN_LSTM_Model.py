@@ -5,6 +5,7 @@ import tensorflow as tf
 from matplotlib import pyplot
 from sklearn.metrics import classification_report
 from sklearn.metrics import confusion_matrix
+import os
 
 # load a single file as a numpy array
 def load_file(filepath):
@@ -77,6 +78,14 @@ def uar_accuracy(y_true, y_pred):
 
 # fit and evaluate a model
 def evaluate_model(trainX, trainy, testX, testy, lSize):
+
+    checkpoint_path = 'training_1' + '/'+ 'cp_' + str(lSize) + '.ckpt'
+    checkpoint_dir = os.path.dirname(checkpoint_path)
+
+    # Create a callback that saves the model's weights
+    cp_callback = tf.keras.callbacks.ModelCheckpoint(filepath=checkpoint_path,
+                                                     save_weights_only=True,
+                                                     verbose=1)
     # define model
     batch_size = 32
     verbose, epochs = 0, 25 #best batch so far is 32
@@ -99,7 +108,7 @@ def evaluate_model(trainX, trainy, testX, testy, lSize):
     tf.keras.utils.plot_model(model, show_shapes=False, show_layer_names=True, to_file='figures/CNN_LSTM.png')
     model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
     # fit network
-    model.fit(trainX, trainy, epochs=epochs, batch_size=batch_size, verbose=verbose)
+    model.fit(trainX, trainy, epochs=epochs, batch_size=batch_size, verbose=verbose, callbacks=[cp_callback])
     # evaluate model
     _, accuracy = model.evaluate(testX, testy, batch_size=batch_size, verbose=0)
 
@@ -108,6 +117,8 @@ def evaluate_model(trainX, trainy, testX, testy, lSize):
     print(classification_report(Y_test, y_pred))
     matrix = uar_accuracy(Y_test, y_pred)
     print(matrix)
+    # Display the model's architecture
+    model.summary()
     return accuracy
 
 # summarize scores
@@ -147,3 +158,4 @@ def run_experiment(repeats=1):
 
 # run the experiment
 run_experiment()
+

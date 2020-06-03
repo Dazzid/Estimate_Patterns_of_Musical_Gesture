@@ -91,7 +91,7 @@ def evaluate_model(trainX, trainy, testX, testy, lSize):
     verbose, epochs = 0, 25 #best batch so far is 32
     n_features, n_outputs = trainX.shape[2], trainy.shape[1]
     # reshape data into time steps of sub-sequences
-    n_steps, n_length = 3, 50 #best so far is 5 30
+    n_steps, n_length = 2, 75 #best so far is 3 50
     trainX = trainX.reshape((trainX.shape[0], n_steps, n_length, n_features))
     testX = testX.reshape((testX.shape[0], n_steps, n_length, n_features))
     # define model

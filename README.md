@@ -15,7 +15,7 @@ Eight bow-strokes were recorded by musicians following a musical score with a fi
 
 ## Cluster Data
 All the samples as a 3D representation cluster after translating the Quaternion data into Euler angles:
-<img src="figures/03_Cluster_Data.jpg" alt="Drawing" width="700px"/>
+<div style="text-align:center"><img src="figures/03_Cluster_Data.jpg" alt="Drawing" width="700px"/></div>
 
 ## Gesture Trajectories
 We have eight different patterns after translating the Quaternion data into Euler Angles:

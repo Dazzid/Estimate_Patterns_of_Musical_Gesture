@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 # Deep Learning Techniques Applied to Estimate Music Gestural Patterns
 The following code provide all the Deep Learning techniques applied in the paper using Keras framework. 
 

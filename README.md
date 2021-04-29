@@ -13,10 +13,16 @@ Eight bow-strokes were recorded by musicians following a musical score with a fi
 
 <img src="figures/01_music_score_eight_gestures.jpg" alt="Drawing" width="600px"/>
 
+## Cluster Data
+All the samples as a 3D representation cluster after translating the Quaternion data into Euler angles:
+<img src="figures/03_Cluster_Data.jpg" alt="Drawing" width="700px"/>
+
 ## Gesture Trajectories
 We have eight different patterns after translating the Quaternion data into Euler Angles:
+
 <img src="figures/12_Gestures.jpg" alt="Drawing" width="600px"/>
 
 ## 3D Data Format
 The shape of the 3D data to be passed to the LSTM models is given by (Samples, Time-steps, Features). As you might see in the data/Gestures/All folder, features are organised in independent files from 1 to 9 wich each of them are the axes per sensor device (Accelerometer, Gyroscope and Magnetometer).
+
 <img src="figures/04_3D_Data.jpg" alt="Drawing" width="600px"/>

@@ -2,7 +2,8 @@
 [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 # Deep Learning Techniques Applied to Estimate Music Gestural Patterns
 The following code provide all the Deep Learning techniques applied in the paper using Keras framework. 
-
+### The paper is available here:
+[Applying Deep Learning Techniques to Estimate Patterns of Musical Gesture](https://www.frontiersin.org/articles/10.3389/fpsyg.2020.575971/full)
 We used: 
 - Python '3.6.8' 
 - TensorFlow '2.0.0' 

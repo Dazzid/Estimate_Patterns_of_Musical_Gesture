@@ -7,3 +7,7 @@ We used:
 - NumPy '1.17.4' 
 - Scikit-learn '0.23.1' 
 - Pyquaternion '0.9.5'.
+
+## Music Material
+
+<img src="figures/01_music_score_eight_gestures.jpg" alt="Drawing" style="width: 700px;"/>

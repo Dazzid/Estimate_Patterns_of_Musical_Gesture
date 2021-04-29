@@ -11,7 +11,7 @@ We used:
 ## Music Material
 Eight bow-strokes were recorded by musicians following a musical score with a fixed metronome tempo of quarter-notes at 80 bpm. All gestures were established in G, primarily in the major mode except for tremolo (G minor) and col legno (chromatic). On the violin, two octaves from G3 to G5 covers the whole neck and also all four strings. Eight musicians participated in the recording sessions, with expert models constructed using the data from five violinists; the other three participants were reserved as test cases. The recordings are part of a collaboration with the Royal College of Music in London.
 
-<p align="center"><img src="figures/01_music_score_eight_gestures.jpg" alt="Drawing" width="700px"/></p>
+<p align="center"><img src="figures/01_music_score_eight_gestures.jpg" alt="Drawing" width="800px"/></p>
 
 ## Cluster Data
 All the samples as a 3D representation cluster after translating the Quaternion data into Euler angles:
